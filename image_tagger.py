@@ -26,7 +26,7 @@ class ImageTagger:
 
 
         #iterate over all objects in bucket
-        for i, blob in enumerate(bucket.list_blobs(max_results=10)):
+        for i, blob in enumerate(bucket.list_blobs()):
             blob.make_public() #otherwise vision api can't access it
             uid = self.extract_uid(blob.id)
             print(f'processing image #{i+1}: {uid}')
