@@ -58,4 +58,5 @@ class ImageTagger:
 if __name__ == '__main__':
     bucket_name = sys.argv[1]
     output_file = sys.argv[2]
-    ImageTagger().run(bucket_name, output_file)
+    it = ImageTagger()
+    it.run(bucket_name, output_file)
