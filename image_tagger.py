@@ -33,7 +33,7 @@ class ImageTagger:
             self.detect_labels(blob.public_url, uid)
 
         output = json.dumps(self.results, indent=2)
-        with open('out.json', 'w') as f:
+        with open(output_file, 'w') as f:
             f.write(output)
         print('Completed!')
 
